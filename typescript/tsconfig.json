@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "target": "ES5",
+        "outDir": "./js-exports",
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
