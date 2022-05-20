@@ -27,7 +27,7 @@ var App = /** @class */ (function () {
         this.context = context;
         var circuit = new Image();
         circuit.src = "./assets/images/circuit-A.png";
-        this.circuit = circuit;
+        circuit.onload = function () { return _this.circuit = circuit; };
         this.widthRatio = (Number(this.circuit.width) / this.canvas.width) / 2;
         this.heightRatio = (Number(this.circuit.height) / this.canvas.height) / 2;
         this.resizeCanvas();
