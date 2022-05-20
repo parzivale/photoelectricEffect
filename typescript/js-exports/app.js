@@ -27,9 +27,11 @@ var App = /** @class */ (function () {
         this.context = context;
         var circuit = new Image();
         circuit.src = "./assets/images/circuit-A.png";
-        circuit.onload = function () { return _this.circuit = circuit; };
-        this.widthRatio = (Number(this.circuit.width) / this.canvas.width) / 2;
-        this.heightRatio = (Number(this.circuit.height) / this.canvas.height) / 2;
+        circuit.onload = function () {
+            _this.circuit = circuit;
+            _this.widthRatio = (Number(_this.circuit.width) / _this.canvas.width) / 2;
+            _this.heightRatio = (Number(_this.circuit.height) / _this.canvas.height) / 2;
+        };
         this.resizeCanvas();
         this.createUserEvents();
         this.anim();

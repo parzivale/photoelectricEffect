@@ -12,19 +12,20 @@ class App {
 
 
     constructor() {
-        let canvas = document.getElementById('canvas') as HTMLCanvasElement;
+        let canvas = document.getElementById('canvas') as HTMLCanvasElement 
         let context = canvas.getContext("2d")
 
         this.canvas = canvas
         this.context = context
 
-        let circuit = new Image()
+        let circuit = new Image() as HTMLImageElement
         circuit.src = "./assets/images/circuit-A.png"
 
-        circuit.onload = () => this.circuit = circuit
-
-        this.widthRatio = (Number(this.circuit.width)/this.canvas.width)/2
-        this.heightRatio = (Number(this.circuit.height)/this.canvas.height)/2
+        circuit.onload = () => {
+            this.circuit = circuit
+            this.widthRatio = (Number(this.circuit.width)/this.canvas.width)/2
+            this.heightRatio = (Number(this.circuit.height)/this.canvas.height)/2
+        }
 
         this.resizeCanvas()
         this.createUserEvents()
