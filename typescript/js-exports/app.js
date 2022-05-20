@@ -31,10 +31,10 @@ var App = /** @class */ (function () {
             _this.circuit = circuit;
             _this.widthRatio = (Number(_this.circuit.width) / _this.canvas.width) / 2;
             _this.heightRatio = (Number(_this.circuit.height) / _this.canvas.height) / 2;
+            _this.resizeCanvas();
+            _this.createUserEvents();
+            _this.anim();
         };
-        this.resizeCanvas();
-        this.createUserEvents();
-        this.anim();
     }
     return App;
 }());

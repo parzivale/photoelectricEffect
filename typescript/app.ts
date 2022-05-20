@@ -25,11 +25,13 @@ class App {
             this.circuit = circuit
             this.widthRatio = (Number(this.circuit.width)/this.canvas.width)/2
             this.heightRatio = (Number(this.circuit.height)/this.canvas.height)/2
+            
+            this.resizeCanvas()
+            this.createUserEvents()
+            this.anim()
         }
 
-        this.resizeCanvas()
-        this.createUserEvents()
-        this.anim()
+
     }
 
     private createUserEvents = () => {
